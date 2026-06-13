@@ -23,7 +23,7 @@ jobs:
         pip install mlflow==2.19.0 pandas scikit-learn
 
     - name: Run MLflow Project
-run: |
+      run: |
         # Memaksa sistem masuk ke dalam folder MLProject terlebih dahulu
         cd MLProject
         
