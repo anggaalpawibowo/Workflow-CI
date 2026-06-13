@@ -32,4 +32,4 @@ jobs:
         sleep 5 
         
         # Menjalankan MLflow menggunakan tanda titik (.) yang artinya "di sini"
-        mlflow run . --env-manager=local
+        mlflow run . --env-manager=local --experiment-name="Eksperimen_SML_Angga"
