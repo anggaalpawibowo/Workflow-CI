@@ -23,10 +23,13 @@ jobs:
         pip install mlflow==2.19.0 pandas scikit-learn
 
     - name: Run MLflow Project
-      run: |
+run: |
+        # Memaksa sistem masuk ke dalam folder MLProject terlebih dahulu
+        cd MLProject
+        
         # Menyalakan MLflow server di background
         mlflow server --host 127.0.0.1 --port 5000 &
         sleep 5 
         
-        # Menjalankan MLflow project
-        mlflow run MLProject --env-manager=local
+        # Menjalankan MLflow menggunakan tanda titik (.) yang artinya "di sini"
+        mlflow run . --env-manager=local
